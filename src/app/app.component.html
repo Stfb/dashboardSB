@@ -1,0 +1,58 @@
+<div class="container-fluid h-100 no-padding">
+
+  <div class="toolbar">
+    <nav class="navbar navbar-dark toobar-h">
+        <span class="toolbar-left-items" (click)="toggleMenu()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-snowflake-o" aria-hidden="true"></i>&nbsp;LOGO
+              </a>
+        </span>
+      <div class="navbar-expand" id="navbarToolbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-cogs toolbar-icon" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-sign-out toolbar-icon" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="main">
+    <div class="leftmenu" [ngClass]="(leftmenuVisible)?'':'leftmenu-hide'">
+      <nav class="navbar navbar-dark" id="menuNav">
+          <ul class="navbar-nav flex-column">
+            <li *ngFor="let item of menuItems" class="nav-item" [ngClass]="(item.active)?'active':''">
+              <a class="nav-link" href="#/{{item.link}}" [ngClass]="(item.disabled)?'disabled':''">
+                <i class="fa {{item.icon}} menu-icon" aria-hidden="true"><span class="ispace">{{item.title}}</span></i>
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="copyright">
+            <span>&copy;2017 Stfb</span>
+          </div>
+          <div class="version">
+            <span>V 1.0</span>
+          </div>
+          <div class="sentence">
+            <span>Made with <i class="fa fa-heart" aria-hidden="true" style="font-family: FontAwesome !important;"></i> by Stfb</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.container404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container404 img{
+    width: inherit;
+}
+
+.error-text {
+    font-size: 8vw;
+    color: #ffffff;
+    text-shadow: 3px 4px 4px #404040;
+    position: absolute;
+}

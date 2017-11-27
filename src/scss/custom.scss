@@ -1,0 +1,213 @@
+
+/*                      */
+/*    General Styling   */
+/*                      */
+
+@font-face {
+    font-family: 'globalFont';
+    src: url('../assets/fonts/Lato-Regular.woff') format('woff');
+}
+
+*{
+    font-family: globalFont !important;
+}
+
+$bars-opacity: 0.6;
+
+html,body {
+    min-width: 20em;
+    height: 100%;
+    color: $gray-500;
+    background-image: url("../assets/images/binding_dark.png");
+    // background-color: #1b1b1b;
+}
+
+/* Menu color Gradient */
+@mixin bg-dark-gradient-h{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b2b2b+0,353535+98,a34559+100 */
+    background: #2b2b2b; /* Old browsers */
+    background: -moz-linear-gradient(left, #2b2b2b 0%, #353535 98%, #a34559 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #2b2b2b 0%,#353535 98%,#a34559 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #2b2b2b 0%,#353535 98%,#a34559 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#a34559',GradientType=1 ); /* IE6-9 */
+    opacity: $bars-opacity;
+    }
+
+
+/* Toolbar color gradient */
+@mixin bg-dark-gradient-v{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3c3d42+0,262626+100 */
+    background: #3c3d42; /* Old browsers */
+    background: -moz-linear-gradient(top, #3c3d42 0%, #262626 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3c3d42 0%,#262626 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3c3d42 0%,#262626 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3d42', endColorstr='#262626',GradientType=0 ); /* IE6-9 */
+    opacity: $bars-opacity;
+}
+
+body h1{
+    color: #8ba1f9;
+}
+
+body a:link{
+    color: #f15f7f;
+}
+body a:hover{
+    color: #8ba1f9;
+}
+body a:visited{
+    color: #768adb;
+}
+
+body .block-bottom-p{
+    padding: 0em 0em 3em 0em;
+
+}
+
+body .block-top-p{
+    padding: 3em 0em 3em 0em;
+    @include bg-dark-gradient-v;
+}
+
+body .block-chart{
+    margin: auto;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    flex-direction: row;
+}
+
+/*                      */
+/*    Toolbar Styling   */
+/*                      */
+
+.toolbar-icon{
+    font-size: 1.2em;
+}
+
+.toobar-h{
+    height: 3em;
+    box-shadow: 0px 0px 1px #5f5f5f;
+}
+
+.toolbar-left-items a{
+    padding-left: 1em;
+}
+
+.toolbar-left-items i{
+    font-family: FontAwesome !important;
+}
+
+.toolbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: inherit;
+    z-index: 50;
+    @include bg-dark-gradient-v;
+}
+
+.toolbar .nav-link i{
+    font-family: FontAwesome !important;
+}
+
+/*                      */
+/*  Left Menu Styling   */
+/*                      */
+
+.leftmenu{
+    height: inherit;
+    padding-top: 4em;
+    width: 3em;
+    overflow: hidden;
+    -webkit-transition: width 0.3s; /* Safari */
+    transition: width 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    @include bg-dark-gradient-h;
+}
+
+.leftmenu i{
+    font-family: FontAwesome !important;
+}
+.leftmenu i span{
+    font-family: globalFont !important;
+}
+
+.leftmenu:hover{
+    height: inherit;
+    padding-top: 4em;
+    width: 18em;
+}
+
+.leftmenu .ispace{
+    padding-left: 15em;
+}
+
+.leftmenu:hover .ispace{
+    padding-left: 1em;
+}
+
+.leftmenu-hide{
+    width: 0;
+}
+
+/*                      */
+/*    Content Styling   */
+/*                      */
+
+.content{
+    padding-top: 4.5em;
+    overflow: auto;
+    width: inherit;
+    height: inherit;
+}
+
+.main-content{
+    margin-bottom: 2em;
+}
+
+/*                      */
+/*    Footer Styling    */
+/*                      */
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: inherit;
+    @include bg-dark-gradient-v;
+}
+
+.footer-content{
+    padding: 0.2em;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright{
+    flex-grow: 2;
+}
+
+.copyright>span{
+    padding-left: 3em;
+}
+
+.version{
+    flex-grow: 10;
+    text-align: center;
+}
+
+.sentence{
+    flex-grow: 1;
+}
