@@ -7,7 +7,7 @@ This project was scaffolded with [Angular CLI](https://github.com/angular/angula
  ![Screenshot](doc/screenshot.png)
 
 ## What's included
-- Angular 4+ & Typescript
+- Angular 5+ & Typescript 2.6.2
 - Bootstrap 4+ & SCSS
 - Responsive design
 - Font Awesome
@@ -26,7 +26,8 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 
 ## News
-2017-11-26 - Initial commit
+- 2018-02-10 - Updated to Angular 5
+- 2017-11-26 - Initial commit
 
 ## Code scaffolding
 
