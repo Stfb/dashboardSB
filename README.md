@@ -1,4 +1,4 @@
-# DashboardSB
+# DashboardSB - Free Angular Dashboard template
 
 There is a lot of angular dashboard seed projects out there. But they are stuffed with a lot of things that might be not necessary to start a project of your own. So I decided to do my own Angular dashboard lean seed project.
 
